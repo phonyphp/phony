@@ -190,4 +190,16 @@ class Address extends Fake
         return $this->randomFloat($max, $min, $precision);
     }
 
+    public function coordinates(
+        int $precision = 7,
+        int $minLatitude = -90,
+        int $maxLatitude = 90,
+        int $minLongitude = -180,
+        int $maxLongitude = 180
+    ): array {
+        return [
+            $this->latitude($precision, $minLatitude, $maxLatitude),
+            $this->longitude($precision, $minLongitude, $maxLongitude)
+        ];
+    }
 }
