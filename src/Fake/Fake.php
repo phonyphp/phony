@@ -226,6 +226,20 @@ class Fake
     }
 
     /**
+     * @param  int  $min
+     * @param  int  $max
+     *
+     * @return int
+     * @throws \Exception
+     */
+    protected function numberBetween(int $min, int $max): int
+    {
+        return $min < $max
+            ? random_int($min, $max)
+            : random_int($max, $min);
+    }
+
+    /**
      * @param  int|null  $max
      * @param  int|null  $min
      * @param  int|null  $nbMaxDecimals
