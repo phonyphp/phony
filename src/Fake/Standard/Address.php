@@ -129,4 +129,35 @@ class Address extends Fake
     {
         return $this->fetch('address.country_by_name', $name);
     }
+
+    /**
+     * Fakes a random latitude.
+     *
+     * precision    degrees     distance
+     * -------------------------------
+     * 0            1.0         111 km
+     * 1            0.1         11.1 km
+     * 2            0.01        1.11 km
+     * 3            0.001       111 m
+     * 4            0.0001      11.1 m
+     * 5            0.00001     1.11 m
+     * 6            0.000001    0.111 m
+     * 7            0.0000001   1.11 cm
+     * 8            0.00000001  1.11 mm
+     * Reference: https://en.wikipedia.org/wiki/Decimal_degrees#Precision
+     *
+     * @param  int  $precision
+     * @param  int  $min
+     * @param  int  $max
+     *
+     * @return float
+     *
+     * @throws \Exception
+     * @example 🙃::address()->latitude() // => -58.17256227443719
+     */
+    public function latitude(int $precision = 7, int $min = -90, int $max = 90): float
+    {
+        return $this->randomFloat($max, $min, $precision);
+    }
+
 }
