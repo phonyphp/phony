@@ -8,7 +8,7 @@ use Phony\Fake\Fake;
  * Class Boolean.
  *
  *
- * @property-read boolean boolean
+ * @property-read bool boolean
  */
 class Boolean extends Fake
 {
