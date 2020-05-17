@@ -229,8 +229,8 @@ class NumberTest extends BaseTest
         $mean = array_sum($values) / (float) $n;
 
         $variance = array_reduce($values, function ($variance, $item) use ($mean) {
-                return $variance += ($item - $mean) ** 2;
-            }, 0) / (float) ($n - 1);
+            return $variance += ($item - $mean) ** 2;
+        }, 0) / (float) ($n - 1);
 
         $std_dev = sqrt($variance);
 
@@ -275,7 +275,6 @@ class NumberTest extends BaseTest
     }
 
     // endregion
-
 
     // region digit()
 
@@ -359,7 +358,6 @@ class NumberTest extends BaseTest
     }
 
     // endregion
-
 
     // region floatBetween()
 
@@ -492,8 +490,8 @@ class NumberTest extends BaseTest
         $mean = array_sum($values) / (float) $n;
 
         $variance = array_reduce($values, function ($variance, $item) use ($mean) {
-                return $variance += ($item - $mean) ** 2;
-            }, 0) / (float) ($n - 1);
+            return $variance += ($item - $mean) ** 2;
+        }, 0) / (float) ($n - 1);
 
         $std_dev = sqrt($variance);
 
@@ -502,7 +500,6 @@ class NumberTest extends BaseTest
     }
 
     // endregion
-
 
     // region possibleIntegersCount()
 

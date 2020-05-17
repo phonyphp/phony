@@ -86,7 +86,7 @@ class Number extends Fake
             ? 10 ** ($digits - 1)
             : 0;
 
-        if (!isset($isPositive)) {
+        if (! isset($isPositive)) {
             $isPositive = $this->phony->boolean->boolean;
         }
 
@@ -139,7 +139,7 @@ class Number extends Fake
 
         if (count($except) >= $this->possibleIntegersCount($min, $max)) {
             throw new RangeException(sprintf(
-                "There are not enough integers for this range. Between %s to %s, except %s",
+                'There are not enough integers for this range. Between %s to %s, except %s',
                 $min, $max, implode(', ', $except)));
         }
 
