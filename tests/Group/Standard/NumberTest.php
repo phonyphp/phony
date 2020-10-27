@@ -162,8 +162,8 @@ test('integerNormal() method calculates integers with standard deviation', funct
 
     $variance = array_reduce(
             $values, static function ($variance, $item) use ($mean) {
-            return $variance + ($item - $mean) ** 2;
-        }, 0
+                return $variance + ($item - $mean) ** 2;
+            }, 0
         ) / (float) ($n - 1);
 
     $std_dev = sqrt($variance);
@@ -388,7 +388,7 @@ test('floatNormal() method calculates floats with standard deviation', function 
     $mean = array_sum($values) / (float) $n;
 
     $variance = array_reduce(
-        $values, static fn($variance, $item) => $variance + ($item - $mean) ** 2, 0
+        $values, static fn ($variance, $item) => $variance + ($item - $mean) ** 2, 0
         ) / (float) ($n - 1);
 
     $std_dev = sqrt($variance);

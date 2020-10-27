@@ -1,7 +1,7 @@
 <?php
 
-use SRL\Builder;
 use Phonyland\Phony;
+use SRL\Builder;
 
 function 🙃(string $locale = 'en'): Phony
 {
