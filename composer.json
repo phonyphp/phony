@@ -17,12 +17,13 @@
         }
     ],
     "require": {
-        "php": "^7.4"
+        "php": "^7.4 || ^8.0"
     },
     "require-dev": {
         "ext-mbstring": "*",
         "pestphp/pest": "^0.3.9",
         "phpunit/phpunit": "^9.4",
+        "rector/rector": "^0.8.44",
         "simpleregex/srl-php": "^0.1.0",
         "symfony/var-dumper": "^5.1"
     },

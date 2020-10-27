@@ -97,7 +97,7 @@ class Phony
      *
      * @return bool
      */
-    public function __isset($attribute)
+    public function __isset($attribute): bool
     {
         // If it's a fake in the standard group or a group
         return
