@@ -2,7 +2,7 @@
 
 use Phonyland\Fake\Fake;
 
-test('can_call_by_an_alias', function () {
+test('fake classes can be called by an alias', function () {
     expect(🙃()->address)->toBeInstanceOf(Fake::class);
     expect(🙃()->📫)->toBeInstanceOf(Fake::class);
     expect(🙃()->alphabet)->toBeInstanceOf(Fake::class);
