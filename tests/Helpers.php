@@ -1,5 +1,6 @@
 <?php
 
+use SRL\Builder;
 use Phonyland\Phony;
 
 function 🙃(string $locale = 'en'): Phony
@@ -7,12 +8,12 @@ function 🙃(string $locale = 'en'): Phony
     return new Phony($locale);
 }
 
-function regex(): \SRL\Builder
+function regex(): Builder
 {
     return \SRL\SRL::unicode();
 }
 
-function assertRulesMatching(\SRL\Builder $rules, string $value)
+function assertRulesMatching(Builder $rules, string $value)
 {
     expect($rules->isMatching($value))->toBeTrue();
 }
